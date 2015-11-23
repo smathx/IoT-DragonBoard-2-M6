@@ -165,7 +165,9 @@ public class NetworkTestsActivity extends Activity {
     public void testBluetooth(View v) {
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
 
-        if (btAdapter.isEnabled()) {
+        if (btAdapter == null) {
+            btStatus.setText(getString(R.string.no_bluetooth));
+        } else if (btAdapter.isEnabled()) {
             btStatus.setText(getString(R.string.bluetooth_enabled));
         } else {
             Intent btIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
