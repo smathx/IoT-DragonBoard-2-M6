@@ -26,5 +26,6 @@
     <string name="location_available">Your coordinate is (%1$s, %2$s)</string>
     <string name="location_null">Your Location/ GPS Service is enabled, but is
         unable to retrieve your coordinates</string>
+    <string name="no_bluetooth">No Bluetooth found</string>
 
 </resources>
